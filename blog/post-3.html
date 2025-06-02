@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top 10 Common Python Mistakes</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>🐛 Top 10 Common Python Mistakes (and How to Fix Them)</h1>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="index.html">📝 Blog</a>
+      <a href="../projects/index.html">🚀 Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Let’s face it: Python is beginner-friendly… but also full of sneaky traps. Here's a list of the most common Python mistakes I've made (and how you can avoid them!).</p>
+
+    <h2>🔟 1. Using = Instead of ==</h2>
+    <pre><code># ❌ This assigns True to is_valid instead of comparing it
+if is_valid = True:
+    ...
+
+# ✅ Use == for comparison
+if is_valid == True:
+    ...
+</code></pre>
+
+    <h2>9️⃣ 2. Forgetting Indentation</h2>
+    <pre><code># ❌ This will raise an IndentationError
+def say_hello():
+print("Hello")
+
+# ✅ Proper indentation
+def say_hello():
+    print("Hello")
+</code></pre>
+
+    <h2>8️⃣ 3. Mutable Default Arguments</h2>
+    <pre><code># ❌ Don't do this
+def add_item(item, my_list=[]):
+    my_list.append(item)
+    return my_list
+
+# ✅ Use None and initialize inside
+def add_item(item, my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(item)
+    return my_list
+</code></pre>
+
+    <h2>7️⃣ 4. Mixing Tabs and Spaces</h2>
+    <p>This leads to cryptic indentation errors. Use 4 spaces consistently!</p>
+
+    <h2>6️⃣ 5. Confusing is vs ==</h2>
+    <pre><code># ❌ Wrong: checks if they are the same object
+if x is 10:
+
+# ✅ Use == for value comparison
+if x == 10:
+</code></pre>
+
+    <h2>5️⃣ 6. Not Using f-strings</h2>
+    <pre><code># ❌ Less readable
+print("Hello " + name)
+
+# ✅ Cleaner
+print(f"Hello {name}")
+</code></pre>
+
+    <h2>4️⃣ 7. Off-by-One Errors in Ranges</h2>
+    <pre><code># ❌ This misses the last number
+for i in range(1, 10):
+    print(i)
+
+# ✅ Use range(1, 11) to include 10
+</code></pre>
+
+    <h2>3️⃣ 8. Forgetting to Return from a Function</h2>
+    <pre><code># ❌ Doesn’t return anything
+def add(a, b):
+    sum = a + b
+
+# ✅ Remember to return
+def add(a, b):
+    return a + b
+</code></pre>
+
+    <h2>2️⃣ 9. Repeating Code Instead of Using Loops</h2>
+    <p>If you find yourself copy-pasting lines of code — try a for loop or a function instead!</p>
+
+    <h2>1️⃣ 10. Ignoring Errors</h2>
+    <p>Wrap risky code in try/except blocks — and print/log your errors to debug smarter!</p>
+
+    <h2>🎯 Wrap-Up</h2>
+    <p>Mistakes are part of the process. Learn them, laugh at them, and fix them 💪</p>
+
+    <p>Which mistake have you made recently? Let’s talk in the next post or on GitHub!</p>
+  </main>
+
+  <footer>
+    <p>© 2025 SafaZriba – Made with 💡 and Python</p>
+  </footer>
+</body>
+</html>
