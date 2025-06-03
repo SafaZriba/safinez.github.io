@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unit Testing in Python – A Fun Intro</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1> What Is Unit Testing in Python? </h1>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="index.html">📝 Blog</a>
+      <a href="../projects/index.html">🚀 Projects</a>
+    </nav>
+  </header>
+ 
+  <main>
+    <p>Imagine this: you finish your Python app, everything works… until it doesn’t 😩. That’s where unit testing comes in!</p>
+
+    <h2>🔍 What Is Unit Testing?</h2>
+    <p>Unit tests check that each small part of your code (a function or method) works correctly. If one part breaks, your test will catch it before your users do.</p>
+
+    <h2>🧰 Why You Should Care</h2>
+    <ul>
+      <li>- Avoid bugs before they sneak into your project</li>
+      <li>- Understand your code better</li>
+      <li>- Save time debugging later</li>
+      <li>- Works great with GitHub and CI tools</li>
+    </ul>
+
+    <h2>⚙️ Built-in Testing with unittest</h2>
+    <pre><code># my_math.py
+def add(a, b):
+    return a + b
+
+# test_my_math.py
+import unittest
+from my_math import add
+
+class TestAdd(unittest.TestCase):
+    def test_add_positive(self):
+        self.assertEqual(add(2, 3), 5)
+
+    def test_add_negative(self):
+        self.assertEqual(add(-1, -1), -2)
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+
+    <p>Run it from your terminal like this:</p>
+    <pre><code>python test_my_math.py</code></pre>
+
+    <h2> Testing with pytest is much easier!</h2>
+    <p>If you want simpler syntax, use <strong>pytest</strong>:</p>
+
+    <pre><code># test_my_math.py
+from my_math import add
+
+def test_add_positive():
+    assert add(2, 3) == 5
+
+def test_add_negative():
+    assert add(-1, -1) == -2
+</code></pre>
+
+    <p>To run:</p>
+    <pre><code>pip install pytest  
+pytest</code></pre>
+
+    <h2> Tips for Beginners</h2>
+    <ul>
+      <li>- Write tests as you build functions</li>
+      <li>- Store test files like test_*.py</li>
+      <li>- Use GitHub Actions or CI tools to run tests automatically</li>
+    </ul>
+
+    <h2>📣 Final Thoughts</h2>
+    <p>Writing tests is like setting up a safety net. They help you experiment freely without fear of breaking things. Plus, every pro dev does it — you should too.</p>
+
+    <p>Coming soon: how to write tests for real-world projects with mocking and fixtures!</p>
+  </main>
+
+  <footer>
+    <p>© 2025 SafaZriba – Building better code with better habits 💡</p>
+  </footer>
+</body>
+</html>
