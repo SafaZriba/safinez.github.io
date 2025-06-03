@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How I Solve LeetCode Problems – My Beginner Strategy</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1> How I Solve LeetCode Problems as a Beginner</h1>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="index.html">📝 Blog</a>
+      <a href="../projects/index.html">🚀 Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Let’s be honest—starting LeetCode is hard. You open a problem, feel stuck, scroll through solutions, and close the tab. That used to be me.</p>
+
+    <p>But recently, I created a step-by-step system that helps me stay consistent and actually solve problems. Here’s how I do it 👇</p>
+
+    <h2> Step 1: Pick the Right Problem</h2>
+    <ul>
+      <li>Start with <strong>Easy</strong> problems -> yes, even if you’ve coded before</li>
+      <li>Follow a curated list: I use LeetCode’s 75, Neetcode, or Blind 75</li>
+      <li>Track what I solve in Notion or a markdown file -> consistency hack 💯</li>
+    </ul>
+
+    <h2>Step 2: Read, Don't Panic</h2>
+    <ul>
+      <li>Read the question slowly</li>
+      <li>Write down what it asks in my own words</li>
+      <li>Sketch a few examples on paper or with comments</li>
+    </ul>
+
+    <h2> Step 3: Brute Force First</h2>
+    <p>Even if it’s not efficient, I try the first approach that comes to mind. It helps me get <strong>unstuck</strong> and build confidence.</p>
+
+    <pre><code># Example: Two Sum
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)):
+        if nums[i] + nums[j] == target:
+            return [i, j]
+</code></pre>
+
+    <h2>⚙ Step 4: Refactor and Optimize</h2>
+    <p>Once it works, I ask: can I make it faster? Can I use a dictionary? A set?</p>
+
+    <pre><code># Optimized
+seen = {}
+for i, num in enumerate(nums):
+    diff = target - num
+    if diff in seen:
+        return [seen[diff], i]
+    seen[num] = i
+</code></pre>
+
+    <h2> Step 5: Write Down What I Learned</h2>
+    <ul>
+      <li> What was the trick?</li>
+      <li> What topic was involved? (HashMap, Two Pointers...)</li>
+      <li> What will I do differently next time?</li>
+    </ul>
+
+    <h2>! Bonus: I Turn It Into Content</h2>
+    <p>I write blog posts or YouTube shorts about my problem-solving process. It helps me review and build a public portfolio.</p>
+
+    <h2> Final Thoughts</h2>
+    <p>Solving problems isn’t about being smart. It’s about showing up every day—even when your brain feels slow. </p>
+
+    <p>Next up: How I Track My LeetCode Journey (with Notion + a custom dashboard!). Stay tuned!</p>
+  </main>
+
+  <footer>
+    <p>© 2025 SafaZriba – Building better code, one challenge at a time 💡</p>
+  </footer>
+</body>
+</html>
