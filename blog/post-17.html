@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is a Stack? 🥞</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of the Stack data structure with simple analogies.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Is a Stack? 🥞</h1>
+
+  <p>A Stack is a data structure that follows the principle:</p>
+
+  <p><strong>LIFO — Last In, First Out.</strong></p>
+
+  <h2>📦 Real-World Example:</h2>
+
+  <p>
+    Think of a stack of plates.
+  </p>
+
+  <ul>
+    <li>You add a plate on top (push)</li>
+    <li>You remove the top plate (pop)</li>
+  </ul>
+
+  <p>
+    You cannot remove the plate at the bottom directly.
+  </p>
+
+  <h2>🧩 Main Operations:</h2>
+  <ul>
+    <li><strong>Push</strong> → Add an item to the top</li>
+    <li><strong>Pop</strong> → Remove the top item</li>
+    <li><strong>Peek</strong> → View the top item without removing it</li>
+  </ul>
+
+  <h2>⚡ Where Stacks Are Used:</h2>
+  <ul>
+    <li>Undo/Redo functionality</li>
+    <li>Browser history</li>
+    <li>Function calls (Call Stack)</li>
+    <li>Checking balanced parentheses</li>
+  </ul>
+
+  <blockquote>
+    A Stack remembers the most recent action first.
+  </blockquote>
+
+  <h2>💻 Example in Python:</h2>
+
+  <pre><code>
+stack = []
+
+# Push
+stack.append(10)
+stack.append(20)
+stack.append(30)
+
+# Pop
+print(stack.pop())  # Output: 30
+
+# Peek
+print(stack[-1])    # Output: 20
+  </code></pre>
+
+</body>
+</html>
