@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is a Linked List? 🔗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of Linked Lists with simple analogies.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Is a Linked List? 🔗</h1>
+
+  <p>A Linked List is a data structure made of nodes connected together.</p>
+
+  <h2>📦 Real-World Example:</h2>
+
+  <p>
+    Imagine a treasure hunt.
+  </p>
+
+  <p>
+    Each clue tells you where the next clue is.
+  </p>
+
+  <p>
+    You can’t jump directly to the last clue —
+    you must follow the chain.
+  </p>
+
+  <h2>🧩 How It Works:</h2>
+
+  <p>Each node contains:</p>
+
+  <ul>
+    <li><strong>Data</strong> (the value)</li>
+    <li><strong>Pointer</strong> (reference to the next node)</li>
+  </ul>
+
+  <p>
+    The first node is called the <strong>head</strong>.
+  </p>
+
+  <h2>⚡ Why Use It?</h2>
+  <ul>
+    <li>Efficient insertions and deletions</li>
+    <li>No fixed size</li>
+    <li>Flexible memory usage</li>
+  </ul>
+
+  <h2>⚠️ Trade-Off:</h2>
+  <ul>
+    <li>No direct indexing like arrays</li>
+    <li>You must traverse step by step</li>
+  </ul>
+
+  <blockquote>
+    In a Linked List, every element knows only one thing:
+    who comes next.
+  </blockquote>
+
+  <h2>💻 Example in Python:</h2>
+
+  <pre><code>
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+# Creating nodes
+node1 = Node(10)
+node2 = Node(20)
+node3 = Node(30)
+
+# Linking them
+node1.next = node2
+node2.next = node3
+
+# Traversing the list
+current = node1
+while current:
+    print(current.value)
+    current = current.next
+  </code></pre>
+
+</body>
+</html>
