@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is a Trie? 🌲</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of the Trie data structure with simple examples.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Is a Trie? 🌲</h1>
+
+  <p>A Trie is a special type of tree used to store strings efficiently.</p>
+
+  <h2>📦 Real-World Example:</h2>
+
+  <p>
+    Think of autocomplete when you type in Google.
+  </p>
+
+  <p>
+    You type “app”… and it suggests:
+  </p>
+
+  <ul>
+    <li>apple</li>
+    <li>application</li>
+    <li>apply</li>
+  </ul>
+
+  <p>
+    All these words share the same prefix.
+  </p>
+
+  <h2>🧩 How It Works:</h2>
+
+  <p>
+    Each node represents a letter.
+  </p>
+
+  <p>
+    Words are formed by following paths from the root.
+  </p>
+
+  <p>
+    Nodes share common prefixes.
+  </p>
+
+  <h2>⚡ Why It’s Powerful:</h2>
+
+  <ul>
+    <li>Fast prefix searching</li>
+    <li>Efficient autocomplete systems</li>
+    <li>Saves memory by sharing prefixes</li>
+  </ul>
+
+  <blockquote>
+    A Trie grows letter by letter.
+  </blockquote>
+
+  <h2>💻 Simple Python Example:</h2>
+
+  <pre><code>
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.is_end = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+        node.is_end = True
+
+# Example
+trie = Trie()
+trie.insert("apple")
+trie.insert("app")
+  </code></pre>
+
+</body>
+</html>
