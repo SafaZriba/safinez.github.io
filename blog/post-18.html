@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is a Tree in Data Structures? 🌳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of Tree data structures with simple analogies.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Is a Tree in Data Structures? 🌳</h1>
+
+  <p>A Tree is a hierarchical data structure made of nodes connected like branches.</p>
+
+  <h2>📦 Real-World Examples:</h2>
+
+  <ul>
+    <li>Folder system on your computer</li>
+    <li>Organization charts</li>
+    <li>Family trees</li>
+  </ul>
+
+  <h2>🧩 Basic Terms:</h2>
+
+  <ul>
+    <li><strong>Root</strong> → The top node</li>
+    <li><strong>Parent</strong> → A node that has children</li>
+    <li><strong>Child</strong> → A node connected below another</li>
+    <li><strong>Leaf</strong> → A node with no children</li>
+  </ul>
+
+  <h2>🌿 Special Type: Binary Tree</h2>
+
+  <p>
+    A Binary Tree is a tree where each node has at most two children:
+  </p>
+
+  <ul>
+    <li>Left child</li>
+    <li>Right child</li>
+  </ul>
+
+  <h2>⚡ Why Trees Matter:</h2>
+
+  <ul>
+    <li>Efficient searching and sorting</li>
+    <li>Organizing hierarchical data</li>
+    <li>Used in databases and AI systems</li>
+  </ul>
+
+  <blockquote>
+    Trees allow data to grow in multiple directions.
+  </blockquote>
+
+  <h2>💻 Simple Python Example:</h2>
+
+  <pre><code>
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+# Creating nodes
+root = TreeNode(10)
+root.left = TreeNode(5)
+root.right = TreeNode(15)
+
+print(root.value)        # 10
+print(root.left.value)   # 5
+print(root.right.value)  # 15
+  </code></pre>
+
+</body>
+</html>
