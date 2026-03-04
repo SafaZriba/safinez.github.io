@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is Backtracking? 🔄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of the Backtracking algorithm technique.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Is Backtracking? 🔄</h1>
+
+  <p>Backtracking is an algorithm technique used to explore all possible solutions by trying, undoing, and trying again.</p>
+
+  <h2>📦 Real-World Example:</h2>
+
+  <p>
+    Imagine solving a maze.
+  </p>
+
+  <ul>
+    <li>You choose a path.</li>
+    <li>If you hit a dead end, you go back.</li>
+    <li>Then you try another path.</li>
+  </ul>
+
+  <p>
+    That “go back and try again” behavior is backtracking.
+  </p>
+
+  <h2>🧩 Where It’s Used:</h2>
+
+  <ul>
+    <li>Sudoku solvers</li>
+    <li>N-Queens problem</li>
+    <li>Generating permutations</li>
+    <li>Combination problems</li>
+  </ul>
+
+  <h2>⚡ Why It’s Powerful:</h2>
+
+  <ul>
+    <li>Explores all valid possibilities</li>
+    <li>Avoids unnecessary paths early</li>
+    <li>Works well with recursion</li>
+  </ul>
+
+  <blockquote>
+    Try. Fail. Undo. Try again.
+  </blockquote>
+
+  <h2>💻 Simple Example (Generating Subsets):</h2>
+
+  <pre><code>
+def backtrack(start, path):
+    print(path)
+
+    for i in range(start, len(nums)):
+        path.append(nums[i])
+        backtrack(i + 1, path)
+        path.pop()  # Undo choice
+
+nums = [1, 2, 3]
+backtrack(0, [])
+  </code></pre>
+
+</body>
+</html>
