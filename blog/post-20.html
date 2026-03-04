@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is a Heap? ⛰️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of the Heap data structure with simple examples.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Is a Heap? ⛰️</h1>
+
+  <p>A Heap is a special type of binary tree used to quickly access the smallest or largest element.</p>
+
+  <h2>📦 Real-World Example:</h2>
+
+  <p>
+    Imagine a hospital emergency room.
+  </p>
+
+  <p>
+    Patients are not treated in arrival order.
+  </p>
+
+  <p>
+    The most critical case gets treated first.
+  </p>
+
+  <p>
+    That’s how a Heap works — it always keeps the highest priority element on top.
+  </p>
+
+  <h2>🧩 Types of Heaps:</h2>
+
+  <ul>
+    <li><strong>Min Heap</strong> → Smallest element at the top</li>
+    <li><strong>Max Heap</strong> → Largest element at the top</li>
+  </ul>
+
+  <h2>⚡ Why It’s Powerful:</h2>
+
+  <ul>
+    <li>Fast access to minimum or maximum</li>
+    <li>Used in priority queues</li>
+    <li>Important in algorithms like Heap Sort</li>
+  </ul>
+
+  <blockquote>
+    A Heap doesn’t fully sort data. It only guarantees that the top is correct.
+  </blockquote>
+
+  <h2>💻 Example in Python (Min Heap):</h2>
+
+  <pre><code>
+import heapq
+
+numbers = [5, 3, 8, 1]
+
+heapq.heapify(numbers)  # Convert list into a heap
+
+print(numbers[0])       # Smallest element (1)
+
+heapq.heappush(numbers, 0)
+print(heapq.heappop(numbers))  # Removes smallest element
+  </code></pre>
+
+</body>
+</html>
