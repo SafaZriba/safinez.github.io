@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Are Graphs? 🌐</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of graphs in computer science.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>What Are Graphs? 🌐</h1>
+
+  <p>A Graph is a data structure used to represent relationships between objects.</p>
+
+  <p>It consists of two main parts:</p>
+
+  <ul>
+    <li><strong>Nodes (Vertices)</strong> → the objects</li>
+    <li><strong>Edges</strong> → the connections between them</li>
+  </ul>
+
+  <h2>📦 Real-World Examples:</h2>
+
+  <ul>
+    <li>Social networks (people connected to friends)</li>
+    <li>Google Maps (cities connected by roads)</li>
+    <li>The internet (computers connected by networks)</li>
+  </ul>
+
+  <h2>🧩 Types of Graphs:</h2>
+
+  <ul>
+    <li><strong>Undirected Graph</strong> → connections go both ways</li>
+    <li><strong>Directed Graph</strong> → connections have direction</li>
+    <li><strong>Weighted Graph</strong> → edges have values like distance or cost</li>
+  </ul>
+
+  <h2>⚡ Why Graphs Are Powerful:</h2>
+
+  <ul>
+    <li>Model complex relationships</li>
+    <li>Help find shortest paths</li>
+    <li>Used in networking, AI, and search engines</li>
+  </ul>
+
+  <blockquote>
+    If trees describe hierarchy, graphs describe the real world.
+  </blockquote>
+
+  <h2>💻 Simple Graph Example in Python:</h2>
+
+  <pre><code>
+graph = {
+  "A": ["B", "C"],
+  "B": ["A", "D"],
+  "C": ["A", "D"],
+  "D": ["B", "C"]
+}
+
+print(graph["A"])  # neighbors of A
+  </code></pre>
+
+</body>
+</html>
