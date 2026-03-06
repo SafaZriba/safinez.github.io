@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Is 1-D Dynamic Programming? 🧠</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of 1-D Dynamic Programming with simple examples.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<h1>What Is 1-D Dynamic Programming? 🧠</h1>
+
+<p>1-D Dynamic Programming is a technique used to solve problems by storing solutions to smaller subproblems in a single array.</p>
+
+<p>Instead of solving the same problem again and again, the algorithm remembers previous results.</p>
+
+<h2>📦 Real-World Example</h2>
+
+<p>Imagine climbing a staircase.</p>
+
+<p>You can take either <strong>1 step</strong> or <strong>2 steps</strong> at a time.</p>
+
+<p>The question is: <strong>How many ways can you reach the top?</strong></p>
+
+<p>Instead of recomputing every possibility, we store the number of ways to reach each step.</p>
+
+<h2>🧩 Why It’s Called 1-D</h2>
+
+<p>The solutions are stored in a <strong>single list (array)</strong>.</p>
+
+<ul>
+<li>dp[0]</li>
+<li>dp[1]</li>
+<li>dp[2]</li>
+<li>dp[3]</li>
+</ul>
+
+<p>Each position represents the solution for that step.</p>
+
+<h2>⚡ Why It’s Powerful</h2>
+
+<ul>
+<li>Avoids repeated work</li>
+<li>Makes recursive problems efficient</li>
+<li>Often reduces exponential time to linear time</li>
+</ul>
+
+<blockquote>
+Dynamic Programming is just recursion with memory.
+</blockquote>
+
+<h2>💻 Example in Python (Climbing Stairs)</h2>
+
+<pre><code>
+def climbStairs(n):
+    dp = [0] * (n + 1)
+
+    dp[0] = 1
+    dp[1] = 1
+
+    for i in range(2, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+
+    return dp[n]
+
+print(climbStairs(5))
+</code></pre>
+
+</body>
+</html>
