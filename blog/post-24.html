@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Are Intervals in Programming? ⏱️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly explanation of intervals in algorithms.">
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+    blockquote { border-left: 4px solid #ccc; padding-left: 1em; color: #555; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<h1>What Are Intervals in Programming? ⏱️</h1>
+
+<p>An <strong>interval</strong> represents a range between two values.</p>
+
+<p>It usually looks like this:</p>
+
+<pre><code>[start, end]</code></pre>
+
+<p>For example:</p>
+
+<ul>
+<li>[1, 3]</li>
+<li>[2, 6]</li>
+<li>[8, 10]</li>
+</ul>
+
+<p>These ranges are used to represent things like time slots, events, or numeric ranges.</p>
+
+<h2>📦 Real-World Example</h2>
+
+<p>Imagine scheduling meetings during the day:</p>
+
+<ul>
+<li>Meeting A → [9, 10]</li>
+<li>Meeting B → [9:30, 11]</li>
+<li>Meeting C → [13, 14]</li>
+</ul>
+
+<p>The first two meetings <strong>overlap</strong>. The third one does not.</p>
+
+<h2>🧩 Common Interval Problems</h2>
+
+<ul>
+<li>Merging overlapping intervals</li>
+<li>Finding conflicts in schedules</li>
+<li>Booking meeting rooms</li>
+<li>Finding free time</li>
+</ul>
+
+<h2>⚡ Key Idea</h2>
+
+<p>Most interval problems follow one powerful trick:</p>
+
+<p><strong>Sort the intervals by their starting time.</strong></p>
+
+<p>Once sorted, it becomes easy to detect overlaps or merge ranges.</p>
+
+<h2>💻 Example: Merge Intervals (Python)</h2>
+
+<pre><code>
+def merge(intervals):
+    intervals.sort()
+    merged = [intervals[0]]
+
+    for start, end in intervals[1:]:
+        last_end = merged[-1][1]
+
+        if start <= last_end:
+            merged[-1][1] = max(last_end, end)
+        else:
+            merged.append([start, end])
+
+    return merged
+</code></pre>
+
+<blockquote>
+Intervals turn messy timelines into clean, solvable patterns.
+</blockquote>
+
+</body>
+</html>
